@@ -1,0 +1,472 @@
+@charset "utf-8";
+
+/* ==================================================
+	reset
+================================================== */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	word-break: keep-all;
+	box-sizing: border-box;
+}
+
+body, input, select, textarea, button {
+	font-family: "preRegular";
+	font-size: 1.2rem;
+	background-color: #f5f4f0;
+}
+
+li {
+	list-style: none;
+}
+
+a:link, a:visited, a:active, button:hover {
+	color:#111111; 
+	text-decoration:none;
+}
+
+a:hover, a:focus {
+	color:#111111; 
+	text-decoration:none;
+}
+
+/* Hover */
+.main-nav>li>a:hover {
+	color: #cf2a28 !important;
+}
+
+/* Active */
+.main-nav>li.act>a {
+	color: #cf2a28 !important;
+}
+
+.main-nav .sub-nav>ul>li.act>a {
+	color: #cf2a28;
+	text-decoration: underline;
+}
+
+@font-face {font-family:"preBlack"; src:url("../Univ/font/pretendard/woff2/Pretendard-Black.woff2") format("woff2");}
+@font-face {font-family:"preExtraBold"; src:url("../Univ/font/pretendard/woff2/Pretendard-ExtraBold.woff2") format("woff2");}
+@font-face {font-family:"preBold"; src:url("../Univ/font/pretendard/woff2/Pretendard-Bold.woff2") format("woff2");}
+@font-face {font-family:"preSemiBold"; src:url("../Univ/font/pretendard/woff2/Pretendard-Bold.woff2") format("woff2");}
+@font-face {font-family:"preMedium"; src:url("../Univ/font/pretendard/woff2/Pretendard-Medium.woff2") format("woff2");}
+@font-face {font-family:"preRegular"; src:url("../Univ/font/pretendard/woff2/Pretendard-Regular.woff2") format("woff2");}
+@font-face {font-family:"preLight"; src:url("../Univ/font/pretendard/woff2/Pretendard-Light.woff2") format("woff2");}
+
+
+/* ==================================================
+	공통
+================================================== */
+header {
+	width: 100%;
+}
+
+.top {
+	padding: 15px;
+	background: rgb(50,50,40);
+	border-bottom: 1px solid #fff;
+	margin-left: 260px;
+}
+
+nav {
+	position: fixed;
+    left: 0;
+	top: 0;
+    z-index: 9999;
+    overflow: auto;
+    width: 260px;
+	height: 100%;
+	font-size: 1.3rem;
+	font-family: "preSemiBold";
+	border-right: 1px solid rgb(152, 152, 152);
+	background: #f5f4f0;
+	padding: 15px;
+}
+
+nav>ul>li>a {
+	display: block;
+	padding: 20px 15px;
+	border-bottom: 1px solid rgb(186, 186, 186);
+	color: #111111;
+}
+
+nav>ul>li>a:hover {
+	background: rgb(50,50,40);
+	color: #fff;
+}
+
+nav>ul>li.on a {
+	color: white;
+	background: rgb(50,50,40);
+}
+
+.sub_menu>ul>li.on a {
+	border-bottom: 1px solid #fff;
+}
+
+section {
+	width: 100%;
+	padding-left: 260px;
+}
+
+.inner {
+	background-color: #f5f4f0;
+	position: relative;
+	padding: 15px;
+}
+
+.inner h2 {
+    position: relative;
+    font-size: 2rem;
+    font-family:"preExtraBold";
+    color: #000;
+    text-align: center;
+	padding: 10px;
+}
+
+.inner h2::before {
+	content: "";
+    background-color: rgb(133, 133, 133);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -2px;
+	left: 0;
+}
+
+.inner h2::after {
+	content: "";
+    background-color: rgb(133, 133, 133);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+}
+/* ==================================================
+	index
+================================================== */
+.bg_left {
+    background: #3a3a3a;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+	left: 0;
+    height: 100%;
+    width:70%;
+    padding: 100px;
+}
+
+.bg_line {
+	border-bottom: 2px solid rgb(84, 84, 84);
+	border-top: 2px solid rgb(84, 84, 84);
+}
+
+.bg_left img {
+	width: 60%;
+	padding-bottom: 35px;
+	padding-top: 35px;
+}
+
+.bg_right a {
+	display: flex;
+	color: rgb(36, 36, 36);
+	position: absolute;
+   	right: 20%;
+	bottom: 50%;
+	font-size: 1.8rem;
+	font-family:"preSemiBold";
+}
+
+.bg_right p {
+	padding-right: 15px;
+}
+
+/* ==================================================
+	main
+================================================== */
+.inner_list {
+	display: flex;
+	max-width: 1600px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.main_img {
+	width:80%;
+}
+
+.main_img img {
+	width: 100%;
+	border: 1px solid #afafaf;
+}
+
+.main_txt {
+	margin-left: 50px;
+	letter-spacing: 0.1;
+	background: #fff;
+	padding: 35px;
+}
+
+.main_txt span {
+	display: block;
+}
+
+.main_txt p {
+	line-height: 1.5em;
+} 
+
+.main_txt p:nth-child(1) {
+	font-size: 1.8rem;
+	font-family:"preSemiBold";
+	line-height: 1.5em;
+	padding-bottom: 20px;
+}
+
+.main_txt p {
+	padding-bottom: 20px;
+}
+
+/* ==================================================
+	PROFILE
+================================================== */
+.pro_list {
+	display: flex;
+	max-width: 1600px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.pro_img {
+	width: 40%;
+}
+
+.pro_img img {
+	width: 100%;
+	border: 1px solid #afafaf;
+}
+
+.pro_info {
+	background: #fff;
+	padding: 50px 35px 0;
+	margin-left: 35px;
+}
+
+.pro_info .Info {
+    font-size: 1.2rem;
+	color: #fff;
+}
+
+.pro_info .Info::before {
+	content: 'Info';
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+	margin-bottom: 10px;
+    color: #fff;
+    background: rgb(50,50,40);
+    transform: rotate(-3deg);
+}
+
+.infoarea table {
+	width: 100%;
+	margin-top: 15px;
+	border-top: 2px solid #333;
+	font-size: 1.2rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.infoarea table th {
+	padding: 12px 0;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	color: #444;
+	line-height: 1;
+}
+
+.infoarea table td {
+	padding: 15px;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+	color: #333;
+	word-break: keep-all;
+}
+
+.infoarea table .tl {
+    text-align: left;
+    padding: 25px 25px 25px 15px;
+}
+
+.infoarea table .tl span {
+	padding-left: 20px;
+}
+
+/* ==================================================
+	LASSO GUARD 
+================================================== */
+.inner .sub_menu {
+	background: rgb(50,50,40);
+	width: 100%;
+}
+
+.inner .sub_menu ul {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 0 35px;
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.inner .sub_menu ul li a {
+	color: rgb(255, 255, 255);
+}
+
+.inner .sub_menu ul li:hover a {
+	border-bottom: 1px solid #fff;
+}
+
+.sub01 {
+	max-width: 1800px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.sub01 h3 {
+	font-size: 2.3rem;
+	color: rgb(70, 70, 70);
+	padding-bottom: 15px;
+	letter-spacing: 0.5;
+}
+
+.sub01 p {
+	line-height: 1.7;
+	padding: 20px;
+	background: #fff;
+}
+
+.sub01 p img {
+	width: 130px;
+    margin: -5px 0;
+    padding-right: 5px;
+}
+
+.sub01 span {
+	display: block;
+}
+
+.sub01 ul {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 0 25px;
+	margin-top: 35px;
+}
+
+.sub01 ul li img {
+	border: 1px solid #afafaf;
+	width: 100%;
+}
+
+.movie {
+	margin-top: 35px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.movie .sp-video {
+	width: 70%;
+}
+
+.sub02_img {
+	display: flex;
+}
+
+.sub02_img img {
+	width: 100%;
+}
+
+.sub02_img ul {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 0 20px;
+	margin-bottom: 25px;
+}
+
+/* ==================================================
+	FOR 40 YEARS OLD Mr.yang 
+================================================== */
+.for_list {
+	max-width: 1600px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.for_list p {
+	line-height: 1.5;
+	background: #fff;
+	padding: 15px;
+}
+
+.point::before {
+    content: 'point';
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+    background: rgb(50,50,40);
+    transform: rotate(-3deg);
+}
+
+.point {
+	margin-top: 50px;
+}
+
+/* ==================================================
+	CLIP DIARY
+================================================== */
+.diary {
+	position: relative;
+	max-width: 1600px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 35px;
+	margin-top: 50px;
+}
+
+.day {
+	color: rgb(106, 106, 106);
+	padding-bottom: 10px;
+}
+
+.title {
+	font-size: 1.8rem;
+	font-family:"preSemiBold";
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.diary_movie {
+	text-align: center;
+}
+
+.sp-video {
+	width: 50%;
+	margin-bottom: 25px;
+}
+
+.diary img {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.content {
+	line-height: 1.5;
+	word-break: keep-all;
+}
